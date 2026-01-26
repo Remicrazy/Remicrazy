@@ -8,7 +8,10 @@ Backend developer specializing in **PHP Symfony** with a growing focus on full-s
 - 🔧 **Secondary Stack**: Node.js, React, Vue.js
 - 🌱 **Currently Learning**: Java
 - 💼 **Focus**: Backend architecture (80%) with frontend capabilities (20%)
-- 🚀 **Working On**: [Muster Forge](https://muster-forge.com) - A Warhammer 40k army collection manager
+- 🚀 **Working On**: 
+    - [Muster Forge](https://muster-forge.com) - A Warhammer 40k army collection manager
+    - [Adeptus Carnotensis](https://adeptus-carnotensis.fr) - TODO
+    - [Carnotensis Ultimate League](https://league.adeptus-carnotensis.fr) - anaging a competitive Warhammer 40,000 league
 
 ## Tech Stack
 
@@ -56,22 +59,33 @@ Backend developer specializing in **PHP Symfony** with a growing focus on full-s
 - **Database**: MariaDB
 - **Design**: Warhammer 40k themed dark UI
 
-### 🏆 [Carnotensis League Bot](https://github.com/Remicrazy/carnotensis-league)
-*Discord Bot for Warhammer 40k Elo League* - A comprehensive Discord bot for managing a competitive Warhammer 40,000 league.
+### 🏆 [Carnotensis Ultimate League](https://league.adeptus-carnotensis.fr)
+*Full-Stack Elo System for Warhammer 40k* - A complete ecosystem for managing a competitive Warhammer 40,000 league with Discord bot, REST API, and web dashboard.
 
 **Features:**
-- Elo rating system with placement matches and format multipliers
+- Elo rating system with anti-snowball mechanics (reduced K-factor for top players)
+- Placement matches with boosted gains for new players
+- Format multipliers (2000pts vs 1000pts games)
 - Weekly Friday event management with automated pairings
-- Faction-based team competition (Imperium, Chaos, Xenos, Tyranides)
-- Player statistics and rankings (individual + faction-based)
+- Faction-based competition (Imperium, Chaos, Xenos, Tyranides)
 - Support for 1v1 and 2v2 matches with automatic Elo calculations
-- Discord calendar integration for event scheduling
-- Smart pairing algorithm respecting player preferences and venue constraints
+- Interactive web dashboard with Elo history charts and statistics
+- Real-time leaderboards and player profiles
+
+**Architecture:** Monorepo with 4 packages
+```
+packages/
+├── shared/   # Prisma schema, types, Elo services
+├── bot/      # Discord bot (slash commands)
+├── api/      # REST API (Express)
+└── web/      # Dashboard (React + Recharts)
+```
 
 **Tech Stack:**
-- **Framework**: Discord.js v14 (TypeScript)
-- **Database**: PostgreSQL
-- **Features**: Slash commands, scheduled events, automated mentions
+- **Bot**: Discord.js v14 (TypeScript)
+- **API**: Express + Prisma ORM
+- **Frontend**: React 18 + Vite + Tailwind CSS + Recharts
+- **Database**: MariaDB
 - **Language**: French-first localization
 
 ## Get In Touch
